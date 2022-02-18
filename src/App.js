@@ -1,5 +1,11 @@
-function App() {
-  return <h1>First commit</h1>;
+import React from 'react'
+
+function App () {
+  return (
+    <>
+      <h1>First commit</h1>
+    </>
+  )
 }
 
-export default App;
+export default App
