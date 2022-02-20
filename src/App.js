@@ -1,9 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const TestComponent = styled.div`
+  align-items: center; 
+  background-color: aliceblue; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+`
 
 function App () {
   return (
     <>
-      <h1>First commit</h1>
+      <main>
+        <TestComponent>
+          <h1>First commit</h1>
+        </TestComponent>
+      </main>
     </>
   )
 }
