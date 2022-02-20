@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
+import { variables } from './variables'
 import normalize from 'styled-normalize'
 
 const GlobalStyle = createGlobalStyle`
     ${normalize}
+    ${variables}
 
     * {
         font-family: inherit;

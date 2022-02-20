@@ -12,9 +12,11 @@ const TestComponent = styled.div`
 function App () {
   return (
     <>
-      <TestComponent>
-        <h1>First commit</h1>
-      </TestComponent>
+      <main>
+        <TestComponent>
+          <h1>First commit</h1>
+        </TestComponent>
+      </main>
     </>
   )
 }
