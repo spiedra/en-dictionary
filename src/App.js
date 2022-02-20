@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TestComponent = styled.div`
-  display: flex; 
-  flex-direction: column; 
   align-items: center; 
+  background-color: aliceblue; 
+  display: flex; 
+  flex-direction: column;
   justify-content: center;
-  background-color: aliceblue;
 `
 
 function App () {
