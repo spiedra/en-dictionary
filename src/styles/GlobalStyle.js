@@ -15,6 +15,12 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    body {
+        font-size: 1.1rem; 
+        font-weight: normal;
+        font-family: "Source Code Pro", monospace;
+    }
+
     main {
         display: flex; 
         flex-direction: column;
