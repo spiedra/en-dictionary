@@ -5,14 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## About
 
 ## Teach Stack
+
 - React.js
 - Styled Components
 - Docker
 - ESLint
+- React Router v6
 
 ## Set Up
 
 ## Contributing
+
 If you want to make a contribution, please follow the next steps:
 
 1. Fork the Project

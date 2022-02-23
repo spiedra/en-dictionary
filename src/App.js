@@ -1,23 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const TestComponent = styled.div`
-  align-items: center; 
-  background-color: aliceblue; 
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-`
+import { Link, Outlet } from 'react-router-dom'
 
 function App () {
   return (
-    <>
-      <main>
-        <TestComponent>
-          <h1>First commit</h1>
-        </TestComponent>
-      </main>
-    </>
+    <main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+      <section>
+        <Outlet />
+      </section>
+    </main>
   )
 }
 
