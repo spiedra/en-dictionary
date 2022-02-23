@@ -2,7 +2,8 @@ import { css } from 'styled-components'
 
 export const variables = css`
     :root {
-        --primary-color: #4B50BF;
-        --secondary-color: #EBEDF2;   
+        --neutral-color: #ffff;
+        --primary-color: #412692;   
+        --secondary-color: #81c32d;
     }
 `

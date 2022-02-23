@@ -16,9 +16,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-size: 1.1rem; 
         font-weight: normal;
         font-family: "Source Code Pro", monospace;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
     }
 
     main {
