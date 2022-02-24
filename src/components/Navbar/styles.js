@@ -4,7 +4,6 @@ export const Nav = styled.nav`
   background-color: var(--primary-color);
   padding: 1rem 0;
   width: 100%;
-
 `
 export const Logo = styled.a`
   color: var(--neutral-color);
@@ -13,7 +12,7 @@ export const Logo = styled.a`
   padding-left: 2rem;
 
   span {
-      font-size: 1.375rem; 
-      font-weight: 300;
+    font-size: 1.375rem;
+    font-weight: 300;
   }
 `

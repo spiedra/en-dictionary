@@ -1,9 +1,14 @@
 import React from 'react'
-import { SearchInput } from './styles'
+import { SearchButton, SearchIcon, SearchInput } from './styles'
 
 const Search = () => {
   return (
-    <SearchInput type="text"/>
+    <>
+      <SearchInput type="text" />
+      <SearchButton>
+        <SearchIcon />
+      </SearchButton>
+    </>
   )
 }
 
