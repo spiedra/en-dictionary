@@ -6,9 +6,7 @@ function App () {
   return (
     <main>
       <Navbar />
-      <section>
-        <Outlet />
-      </section>
+      <Outlet />
     </main>
   )
 }

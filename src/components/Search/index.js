@@ -1,7 +1,10 @@
 import React from 'react'
+import { SearchInput } from './styles'
 
 const Search = () => {
-  return (<h1>Search</h1>)
+  return (
+    <SearchInput type="text"/>
+  )
 }
 
 export default Search

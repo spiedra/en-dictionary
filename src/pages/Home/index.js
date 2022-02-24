@@ -1,9 +1,11 @@
 import React from 'react'
+import Search from '../../components/Search'
+import { SearchSection } from './styles'
 
 const Home = () => {
-  return (<h1>
-        This is the HOME
-    </h1>)
+  return (<SearchSection>
+    <Search />
+  </SearchSection>)
 }
 
 export default Home
