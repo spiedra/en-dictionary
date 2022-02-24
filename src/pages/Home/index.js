@@ -3,9 +3,11 @@ import Search from '../../components/Search'
 import { SearchSection } from './styles'
 
 const Home = () => {
-  return (<SearchSection>
-    <Search />
-  </SearchSection>)
+  return (
+    <SearchSection>
+      <Search />
+    </SearchSection>
+  )
 }
 
 export default Home
