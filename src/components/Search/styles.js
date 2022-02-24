@@ -19,14 +19,19 @@ export const SearchButton = styled.button`
   cursor: pointer;
   height: 45px;
   padding: 0.7rem 0.8rem;
+  transition: var(--main-transition);
 `
 
 export const SearchIcon = styled(AiOutlineSearch)`
   color: var(--neutral-color);
   font-size: 1.5rem;
-  transition: var(--main-transition);
+  transition: inherit;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `
