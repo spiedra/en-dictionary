@@ -15,6 +15,20 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    body {
+        font-weight: normal;
+        font-family: "Source Code Pro", monospace;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
     main {
         display: flex; 
         flex-direction: column;

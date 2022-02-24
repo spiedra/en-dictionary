@@ -17,9 +17,9 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<App />}>
+          <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path='translation/:word' element={<Translation />} />
+            <Route path="translation/:word" element={<Translation />} />
           </Route>
         </Routes>
       </BrowserRouter>
