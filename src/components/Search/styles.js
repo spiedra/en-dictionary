@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
 
+export const SearchContainer = styled.div`
+  ${(props) => props.theme.mixins.flexCenter}
+  padding: 5rem 0;
+  width: 100%; 
+`
+
+export const SearchForm = styled.form`
+  ${(props) => props.theme.mixins.flexCenter}
+  width: 60%;
+`
+
 export const SearchInput = styled.input`
   background-color: var(--input-color);
   border: none;
@@ -9,7 +20,7 @@ export const SearchInput = styled.input`
   height: var(--input-height);
   outline: none;
   padding: 0 0.625rem;
-  width: 60%;
+  width: 100%;
 `
 
 export const SearchButton = styled.button`
