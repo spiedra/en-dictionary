@@ -8,6 +8,7 @@ const WordDay = () => {
       <div>
         <h2>WordTest</h2>
         <p>Another test</p>
+        <p>Second test</p>
       </div>
     </SectionWordDay>
   )
