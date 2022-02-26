@@ -4,11 +4,9 @@ import { Nav, Logo } from './styles'
 const Navbar = () => {
   return (
     <Nav>
-      <a href='/' rel="noreferrer">
-        <Logo>
-          EN<span>Dictionary</span>
-        </Logo>
-      </a>
+      <Logo href="/" rel="noreferrer">
+        EN<span>Dictionary</span>
+      </Logo>
     </Nav>
   )
 }
