@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { getRandomWord } from '../../services/getRandomWord'
+import { getWordDay } from '../../services/getWordDay'
 import { SectionWordDay } from './styles'
 
 const WordDay = () => {
   useEffect(() => {
-    getRandomWord().then((response) => {
+    getWordDay().then((response) => {
       console.log(response)
     })
   }, [])
