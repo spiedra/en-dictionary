@@ -1,20 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getWordDay } from '../../services/getWordDay'
-import { SectionWordDay } from './styles'
+import { DateContainer, FirstMarker, MeaningContainer, SectionWordDay, WordDataContainer, WordTitle, MeaningTitle, SecondMarker } from './styles'
 
 const WordDay = () => {
+  const [wordData, setWordData] = useState({})
+
   useEffect(() => {
     getWordDay().then((response) => {
-      console.log(response)
+      setWordData(response)
     })
   }, [])
 
   return (
     <SectionWordDay>
-      <h1>Word of the day</h1>
-      <div>
-        <h2>WordTest</h2>
-      </div>
+      <DateContainer>
+        <span>Word of the Day: {wordData.date}</span>
+      </DateContainer>
+      <FirstMarker />
+      <WordDataContainer>
+        <WordTitle>{wordData.word}</WordTitle>
+        <div>
+          <span>{wordData.category}</span>
+          {'|'}
+          <span>{wordData.pronunciation}</span>
+        </div>
+      </WordDataContainer>
+      <SecondMarker />
+      <MeaningContainer>
+        <MeaningTitle>What it Means</MeaningTitle>
+        <p>{wordData.meaning}</p>
+      </MeaningContainer>
     </SectionWordDay>
   )
 }

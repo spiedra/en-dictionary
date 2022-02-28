@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
+  ${(props) => props.theme.mixins.flexCenter}
   background-color: var(--primary-color);
   padding: 1rem 0;
   width: 100%;
+
+  div {
+    align-self: flex-start;
+    display: flex;
+  }
 `
 export const Logo = styled.a`
   color: var(--neutral-color);

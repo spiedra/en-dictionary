@@ -3,20 +3,21 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 export const SearchContainer = styled.div`
   ${(props) => props.theme.mixins.flexCenter}
-  padding: 5rem 0;
-  width: 100%; 
+  background-color: var(--primary-color);
+  width: 100%;
 `
 
 export const SearchForm = styled.form`
   ${(props) => props.theme.mixins.flexCenter}
-  width: 60%;
+  border-radius: 10px;
+  width: 65%;
 `
 
 export const SearchInput = styled.input`
-  background-color: var(--input-color);
+  background-color: var(--neutral-color);
   border: none;
   border-bottom: 0.3rem solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 4px 0px 0px 4px;
   height: var(--input-height);
   outline: none;
   padding: 0 0.625rem;
@@ -24,7 +25,7 @@ export const SearchInput = styled.input`
 `
 
 export const SearchButton = styled.button`
-  background-color: var(--primary-color);
+  background-color: var(--neutral-color);
   border: none;
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
@@ -34,7 +35,7 @@ export const SearchButton = styled.button`
 `
 
 export const SearchIcon = styled(AiOutlineSearch)`
-  color: var(--neutral-color);
+  color: var(--primary-color);
   font-size: 1.5rem;
   transition: inherit;
 
