@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const SectionWordDay = styled.section`
-   ${(props) => props.theme.mixins.flexCenter}
+  ${(props) => props.theme.mixins.flexCenter}
   flex-direction: column;
-  padding: 4rem 0;  
-  width: 85%
+  padding: 4rem 0;
+  width: 85%;
 `
 
 export const DateContainer = styled.div`
@@ -27,8 +27,8 @@ export const WordDataContainer = styled.div`
 `
 
 export const WordTitle = styled.h1`
-  color: #3b3e41;
- font-size: 3.5em;
+  color: var(--title-color);
+  font-size: 3.5em;
 `
 export const MeaningContainer = styled.div`
   ${(props) => props.theme.mixins.flexStart}
@@ -38,7 +38,7 @@ export const MeaningContainer = styled.div`
 `
 
 export const MeaningTitle = styled.h2`
-  color: #3b3e41;
-  font-size: 1.4em;
-
+  color: var(--title-color);
+  font-size: 1.3em;
+  font-weight: bold;
 `
