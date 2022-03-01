@@ -10,7 +10,11 @@ export const SearchContainer = styled.div`
 export const SearchForm = styled.form`
   ${(props) => props.theme.mixins.flexCenter}
   border-radius: 10px;
-  width: 65%;
+  width: 80%;
+
+  @media ${(props) => props.theme.bp.tablet} {
+    width: 65%;
+  }
 `
 
 export const SearchInput = styled.input`

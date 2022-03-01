@@ -6,11 +6,11 @@ const Navbar = () => {
   return (
     <Nav>
       <div>
-      <Logo href="/" rel="noreferrer">
-        EN<span>Dictionary</span>
-      </Logo>
+        <Logo href="/" rel="noreferrer">
+          EN<span>Dictionary</span>
+        </Logo>
       </div>
-      <Search/>
+      <Search />
     </Nav>
   )
 }

@@ -35,7 +35,8 @@ const WordDay = () => {
         ? (
         <SectionWordDay>
           <DateContainer>
-            <span>Word of the Day: {wordData.date}</span>
+            <span>Word of the Day:</span>
+            <span>{wordData.date}</span>
           </DateContainer>
           <FirstMarker />
           <WordDataContainer>
