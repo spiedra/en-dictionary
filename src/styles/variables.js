@@ -11,5 +11,6 @@ export const variables = css`
     --neutral-color: #ffff;
     --primary-color: #412692;
     --secondary-color: #81c32d;
+    --title-color: #3b3e41;
   }
 `

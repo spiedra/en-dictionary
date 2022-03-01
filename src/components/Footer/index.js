@@ -1,14 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import { FooterContainer } from './styles'
 
-const FooterContainer = styled.footer`
-  ${(props) => props.theme.mixins.flexCenter}
-
-  span {
-    font-size: 13px;
-    padding-bottom: 1.4rem;
-  }
-`
 const Footer = () => {
   return (
     <FooterContainer>

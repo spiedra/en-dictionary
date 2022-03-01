@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SearchButton, SearchIcon, SearchInput } from './styles'
+import { SearchContainer, SearchButton, SearchForm, SearchIcon, SearchInput } from './styles'
 
 const Search = () => {
   const [word, setWord] = useState('')
@@ -9,16 +9,18 @@ const Search = () => {
   }
 
   return (
-    <>
+   <SearchContainer>
+      <SearchForm>
       <SearchInput
         type="text"
         value={word}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <SearchButton>
+      <SearchButton type='button'>
         <SearchIcon />
       </SearchButton>
-    </>
+    </SearchForm>
+   </SearchContainer>
   )
 }
 

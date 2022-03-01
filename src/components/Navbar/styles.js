@@ -1,9 +1,25 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
+  ${(props) => props.theme.mixins.flexCenter}
   background-color: var(--primary-color);
+  flex-wrap: wrap;
   padding: 1rem 0;
   width: 100%;
+
+  div {
+    align-self: flex-start;
+    display: flex;
+    margin-bottom: 1.4em;
+  }
+
+  @media ${(props) => props.theme.bp.tablet} {
+    flex-wrap: nowrap;
+
+    div {
+      margin: 0;
+    }
+  }
 `
 export const Logo = styled.a`
   color: var(--neutral-color);
