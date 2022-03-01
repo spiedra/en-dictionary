@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-weight: normal;
         font-family: "Source Code Pro", monospace;
+        background: var(--neutral-color);
     }
 
     a {
