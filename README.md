@@ -27,4 +27,5 @@ If you want to make a contribution, please follow the next steps:
 ## Acknowledgments
 
 - [Free Dictionary API](https://dictionaryapi.dev/ "Free Dictionary API")
-- [Random Word API](https://random-word-api.herokuapp.com/home "Random Word API")
+- [Merriam-Webster](https://www.merriam-webster.com/ "Merriam-Webster")
+- [Word of the day API](https://github.com/spiedra/word-of-the-day "Word of the day API")
