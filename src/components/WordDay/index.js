@@ -43,9 +43,7 @@ const WordDay = () => {
             <div>
               <WordTitle>{wordData.word}</WordTitle>
               <WordAudio onClick={handlePlay}>
-                <audio ref={audioRef}>
-                  <source src={wordData.audio}></source>
-                </audio>
+                <audio ref={audioRef} src={wordData.audio} />
                 <GiSpeaker />
               </WordAudio>
             </div>

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const TranslationContainer = styled.section`
   ${(props) => props.theme.mixins.flexCenter}
   flex-direction: column;
-  padding: 1em 5em 2em 5em;
-  width: 75%;
+  padding: 1.5em 0;
+  width: 85%;
 
   hr {
     width: 95%;
@@ -12,6 +12,10 @@ export const TranslationContainer = styled.section`
     @media ${(props) => props.theme.bp.tablet} {
       width: 100%;
     }
+  }
+
+  @media ${(props) => props.theme.bp.tablet} {
+    width: 70%;
   }
 `
 
@@ -46,10 +50,18 @@ export const TransContMeaning = styled.div`
 
     h2 {
       font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-bottom: 0;
     }
 
     li {
+      line-height: 28px;
       list-style: circle;
+      margin-bottom: .8em;
     }
   }
 `

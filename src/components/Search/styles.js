@@ -8,7 +8,7 @@ export const SearchContainer = styled.div`
   width: 100%;
 `
 
-export const SearchForm = styled.form`
+export const SearchForm = styled.div`
   ${(props) => props.theme.mixins.flexCenter}
   border-radius: 10px;
   width: 80%;

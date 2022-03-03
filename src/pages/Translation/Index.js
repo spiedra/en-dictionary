@@ -46,7 +46,7 @@ const Translation = () => {
                   wordData.phonetics.find((phonetics) => phonetics.audio !== '')
                     .audio
                 }
-              ></audio>
+              />
               <GiSpeaker />
             </WordAudio>
           </TransContData>
@@ -55,11 +55,11 @@ const Translation = () => {
             {wordData.meanings.map((element, index) => (
               <div key={index}>
                 <h2>{element.partOfSpeech}</h2>
-                {element.definitions.map((item, index) => (
-                  <ul key={index}>
-                    <li>{item.definition}</li>
-                  </ul>
-                ))}
+                <ul>
+                  {element.definitions.map((item, index) => (
+                    <li key={index}>{item.definition}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </TransContMeaning>
