@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
@@ -21,7 +22,7 @@ export const Nav = styled.nav`
     }
   }
 `
-export const Logo = styled.a`
+export const Logo = styled(Link)`
   color: var(--neutral-color);
   font-size: 1.775rem;
   font-weight: 800;

@@ -96,7 +96,7 @@ export const WordAudio = styled.button`
   padding-left: 1em;
 
   svg {
-    background-color: var(--input-color);
+    background-color: var(--neutral-color);
     border-radius: 50%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     color: var(--title-color);

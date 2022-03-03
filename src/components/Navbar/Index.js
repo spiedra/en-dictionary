@@ -1,12 +1,12 @@
 import React from 'react'
-import Search from '../../components/Search'
+import Search from '../Search'
 import { Nav, Logo } from './styles'
 
 const Navbar = () => {
   return (
     <Nav>
       <div>
-        <Logo href="/" rel="noreferrer">
+        <Logo to="/">
           EN<span>Dictionary</span>
         </Logo>
       </div>
