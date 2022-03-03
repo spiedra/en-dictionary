@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 export const SearchContainer = styled.div`
   ${(props) => props.theme.mixins.flexCenter}
@@ -18,7 +19,7 @@ export const SearchForm = styled.form`
 `
 
 export const SearchInput = styled.input`
-  background-color: var(--neutral-color);
+  background-color: var(--background-color);
   border: none;
   border-bottom: 0.3rem solid transparent;
   border-radius: 4px 0px 0px 4px;
@@ -28,13 +29,13 @@ export const SearchInput = styled.input`
   width: 100%;
 `
 
-export const SearchButton = styled.button`
-  background-color: var(--neutral-color);
+export const SearchButton = styled(Link)`
+  appearance: button;
+  background-color: var(--background-color);
   border: none;
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
-  height: 45px;
-  padding: 0.7rem 0.8rem;
+  padding: 0.55rem 0.8rem;
   transition: var(--main-transition);
 `
 

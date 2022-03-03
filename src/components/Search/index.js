@@ -16,7 +16,7 @@ const Search = () => {
         value={word}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <SearchButton type='button'>
+      <SearchButton to={`/translation/${word}`}>
         <SearchIcon />
       </SearchButton>
     </SearchForm>

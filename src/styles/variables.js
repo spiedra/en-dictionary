@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 export const variables = css`
   :root {
-    --input-color: #f6f6f6;
+    --background-color: #F3F3F3;
 
     --input-height: 2.5rem;
 
