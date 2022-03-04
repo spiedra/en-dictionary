@@ -10,6 +10,7 @@ import { theme } from './styles/theme'
 import App from './App'
 import Home from './pages/Home'
 import Translation from './pages/Translation/Index'
+import NotFound from './pages/NotFound.js'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.render(
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="translation/:word" element={<Translation />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
