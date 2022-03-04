@@ -22,6 +22,7 @@ export const TranslationContainer = styled.section`
 export const TransContData = styled.div`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: start;
   width: 100%;
 

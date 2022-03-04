@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NotFoundContainer = styled.section`
+export const MessageContainer = styled.section`
   ${(props) => props.theme.mixins.flexCenter}
   flex-direction: column;
   font-size: 1.1em;
