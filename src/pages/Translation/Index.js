@@ -25,6 +25,7 @@ const Translation = () => {
       })
       .catch((e) => {
         setIsLoading(false)
+        setWordData()
         throw e.name
       })
   }, [word])
