@@ -9,7 +9,7 @@ import { theme } from './styles/theme'
 
 import App from './App'
 import Home from './pages/Home'
-import Translation from './pages/Translation/index'
+import Translation from './pages/Translation'
 import NotFound from './pages/NotFound'
 
 ReactDOM.render(
