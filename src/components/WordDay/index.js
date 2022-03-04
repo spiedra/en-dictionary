@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react'
-
-import { GiSpeaker } from 'react-icons/gi'
+import React, { useEffect, useState } from 'react'
 import { getWordDay } from '../../services/getWordDay'
+import AudioButton from '../AudioButton'
 import {
   DateContainer,
   FirstMarker,
@@ -10,18 +9,11 @@ import {
   WordDataContainer,
   WordTitle,
   MeaningTitle,
-  SecondMarker,
-  WordAudio
+  SecondMarker
 } from './styles'
 
 const WordDay = () => {
   const [wordData, setWordData] = useState()
-  const audioRef = useRef()
-
-  const handlePlay = () => {
-    const audio = audioRef.current
-    audio.play()
-  }
 
   useEffect(() => {
     getWordDay().then((response) => {
@@ -42,10 +34,7 @@ const WordDay = () => {
           <WordDataContainer>
             <div>
               <WordTitle>{wordData.word}</WordTitle>
-              <WordAudio onClick={handlePlay}>
-                <audio ref={audioRef} src={wordData.audio} />
-                <GiSpeaker />
-              </WordAudio>
+              <AudioButton audioLink={wordData.audio} />
             </div>
             <div>
               <span>{wordData.category}</span>

@@ -1,24 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { GiSpeaker } from 'react-icons/gi'
 import { getWordTranslation } from '../../services/getWordTranslation'
 import {
   TransContData,
   TransContMeaning,
-  TranslationContainer,
-  WordAudio
+  TranslationContainer
 } from './styles'
 import ErrorMessage from '../../components/ErrorMessage'
+import TransWordData from '../../components/TransWordData'
+import TransWordMeaning from '../../components/TransWordMeaning'
 
 const Translation = () => {
   const [wordData, setWordData] = useState()
   const [isLoading, setIsLoading] = useState(false)
-  const audioRef = useRef()
   const { word } = useParams()
-
-  const handlePlay = () => {
-    audioRef.current.play()
-  }
 
   useEffect(() => {
     setIsLoading(true)
@@ -28,9 +23,9 @@ const Translation = () => {
         setWordData(firstElem)
         setIsLoading(false)
       })
-      .catch((error) => {
-        console.log(error)
+      .catch((e) => {
         setIsLoading(false)
+        throw e.name
       })
   }, [word])
 
@@ -43,46 +38,11 @@ const Translation = () => {
             ? (
             <TranslationContainer>
               <TransContData>
-                <h1>{wordData.word}</h1>
-                {wordData.phonetics.find(
-                  (phonetics) => phonetics.text?.length > 0
-                ) && (
-                  <span>
-                    {
-                      wordData.phonetics.find(
-                        (phonetics) => phonetics.text?.length > 0
-                      ).text
-                    }
-                  </span>
-                )}
-                {wordData.phonetics.find(
-                  (phonetics) => phonetics?.audio !== ''
-                ) && (
-                  <WordAudio onClick={handlePlay}>
-                    <audio
-                      ref={audioRef}
-                      src={
-                        wordData.phonetics.find(
-                          (phonetics) => phonetics?.audio !== ''
-                        ).audio
-                      }
-                    />
-                    <GiSpeaker />
-                  </WordAudio>
-                )}
+                <TransWordData wordData={wordData} />
               </TransContData>
               <hr />
               <TransContMeaning>
-                {wordData.meanings.map((element, index) => (
-                  <div key={index}>
-                    <h2>{element.partOfSpeech}</h2>
-                    <ul>
-                      {element.definitions.map((item, index) => (
-                        <li key={index}>{item.definition}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <TransWordMeaning wordData={wordData} />
               </TransContMeaning>
             </TranslationContainer>
               )
