@@ -62,7 +62,7 @@ export const TransContMeaning = styled.div`
     li {
       line-height: 28px;
       list-style: circle;
-      margin-bottom: .8em;
+      margin-bottom: 0.8em;
     }
   }
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from '../Search'
-import { Nav, Logo } from './styles'
+import { Logo, Nav } from './styles'
 
 const Navbar = () => {
   return (

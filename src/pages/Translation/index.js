@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import ErrorMessage from '../../components/ErrorMessage'
+import TransWordData from '../../components/TransWordData'
+import TransWordMeaning from '../../components/TransWordMeaning'
 import { getWordTranslation } from '../../services/getWordTranslation'
 import {
   TransContData,
   TransContMeaning,
   TranslationContainer
 } from './styles'
-import ErrorMessage from '../../components/ErrorMessage'
-import TransWordData from '../../components/TransWordData'
-import TransWordMeaning from '../../components/TransWordMeaning'
 
 const Translation = () => {
   const [wordData, setWordData] = useState()
