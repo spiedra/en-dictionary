@@ -1,18 +1,7 @@
 import React from 'react'
-import Search from '../Search'
-import { Nav, Logo } from './styles'
 
 const Navbar = () => {
-  return (
-    <Nav>
-      <div>
-        <Logo to="/">
-          EN<span>Dictionary</span>
-        </Logo>
-      </div>
-      <Search />
-    </Nav>
-  )
+  return <h1>This is a test #2</h1>
 }
 
 export default Navbar
