@@ -9,8 +9,8 @@ import { theme } from './styles/theme'
 
 import App from './App'
 import Home from './pages/Home'
-import Translation from './pages/Translation'
 import NotFound from './pages/NotFound'
+import Translation from './pages/Translation'
 
 ReactDOM.render(
   <React.StrictMode>
