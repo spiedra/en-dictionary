@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 
+This is a SPA (Single-page application) of an English dictionary, built as a personal project
+
 ## Teach Stack
 
 - React.js
@@ -12,7 +14,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - ESLint
 - Axios
 - React Router v6
-- Vercel
 
 ## Getting Started
 
