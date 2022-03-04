@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React Router v6
 - Vercel
 
-## Set Up
+## Getting Started
 
 ## Contributing
 
