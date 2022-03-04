@@ -1,69 +1,55 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { GiSpeaker } from 'react-icons/gi'
 import { getWordTranslation } from '../../services/getWordTranslation'
 import {
   TransContData,
   TransContMeaning,
-  TranslationContainer,
-  WordAudio
+  TranslationContainer
 } from './styles'
+import ErrorMessage from '../../components/ErrorMessage'
+import TransWordData from '../../components/TransWordData'
+import TransWordMeaning from '../../components/TransWordMeaning'
 
 const Translation = () => {
   const [wordData, setWordData] = useState()
-  const audioRef = useRef()
+  const [isLoading, setIsLoading] = useState(false)
   const { word } = useParams()
 
-  const handlePlay = () => {
-    audioRef.current.play()
-  }
-
   useEffect(() => {
-    getWordTranslation(word).then((response) => {
-      const [firstElem] = response
-      setWordData(firstElem)
-    })
+    setIsLoading(true)
+    getWordTranslation(word)
+      .then((response) => {
+        const [firstElem] = response
+        setWordData(firstElem)
+        setIsLoading(false)
+      })
+      .catch((e) => {
+        setIsLoading(false)
+        throw e.name
+      })
   }, [word])
 
   return (
     <>
-      {wordData
+      {!isLoading
         ? (
-        <TranslationContainer>
-          <TransContData>
-            <h1>{wordData.word}</h1>
-            <span>
-              {
-                wordData.phonetics.find(
-                  (phonetics) => phonetics.text?.length > 0
-                ).text
-              }
-            </span>
-            <WordAudio onClick={handlePlay}>
-              <audio
-                ref={audioRef}
-                src={
-                  wordData.phonetics.find((phonetics) => phonetics.audio !== '')
-                    .audio
-                }
-              />
-              <GiSpeaker />
-            </WordAudio>
-          </TransContData>
-          <hr />
-          <TransContMeaning>
-            {wordData.meanings.map((element, index) => (
-              <div key={index}>
-                <h2>{element.partOfSpeech}</h2>
-                <ul>
-                  {element.definitions.map((item, index) => (
-                    <li key={index}>{item.definition}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </TransContMeaning>
-        </TranslationContainer>
+        <>
+          {wordData
+            ? (
+            <TranslationContainer>
+              <TransContData>
+                <TransWordData wordData={wordData} />
+              </TransContData>
+              <hr />
+              <TransContMeaning>
+                <TransWordMeaning wordData={wordData} />
+              </TransContMeaning>
+            </TranslationContainer>
+              )
+            : (
+            <ErrorMessage text={`No results found for ${word}`} />
+              )}
+        </>
           )
         : (
             ''

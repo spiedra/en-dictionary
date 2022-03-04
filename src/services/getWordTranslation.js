@@ -1,10 +1,14 @@
+import axios from 'axios'
+
+const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
+
 export const getWordTranslation = async (word) => {
-  return fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word)
-    .then((response) => response.json())
-    .then((data) => {
-      return data
-    })
-    .catch((error) => {
-      return error
+  return axios
+    .get(url + word)
+    .then((response) => response.data)
+    .catch(function (error) {
+      if (error.response) {
+        return error.response.status
+      }
     })
 }
