@@ -30,7 +30,6 @@ export const SearchInput = styled.input`
 `
 
 export const SearchButton = styled(Link)`
-  appearance: button;
   background-color: var(--background-color);
   border: none;
   border-radius: 0px 4px 4px 0px;
