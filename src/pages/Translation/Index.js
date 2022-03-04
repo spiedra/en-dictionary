@@ -25,7 +25,8 @@ const Translation = () => {
       })
       .catch((e) => {
         setIsLoading(false)
-        console.log(e.name)
+        setWordData()
+        throw e.name
       })
   }, [word])
 
