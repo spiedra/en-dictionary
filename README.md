@@ -12,6 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - ESLint
 - Axios
 - React Router v6
+- Vercel
 
 ## Set Up
 
