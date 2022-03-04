@@ -30,19 +30,20 @@ export const SearchInput = styled.input`
 `
 
 export const SearchButton = styled(Link)`
-  appearance: button;
   background-color: var(--background-color);
   border: none;
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
-  padding: 0.55rem 0.8rem;
+  height: 44.8px;
   transition: var(--main-transition);
 `
 
 export const SearchIcon = styled(AiOutlineSearch)`
   color: var(--primary-color);
   font-size: 1.5rem;
+  padding: .45em .5em ;
   transition: inherit;
+
 
   &:hover {
     transform: scale(1.1);
