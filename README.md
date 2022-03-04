@@ -17,6 +17,26 @@ This is a SPA (Single-page application) of an English dictionary, built as a per
 
 ## Getting Started
 
+Prerequisites
+
+- git
+- [docker](https://docs.docker.com/install/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+
+Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/spiedra/en-dictionary.git
+```
+
+2. Run docker-compose
+
+```bash
+docker-compose up
+```
+
 ## Contributing
 
 If you want to make a contribution, please follow the next steps:
