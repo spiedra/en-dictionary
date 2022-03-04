@@ -10,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Styled Components
 - Docker
 - ESLint
+- Axios
 - React Router v6
 
 ## Set Up
